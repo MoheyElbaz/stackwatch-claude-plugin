@@ -145,7 +145,10 @@ sw update                                   # after upgrades: re-scan files and 
 sw sources                                  # what is read, item counts, failures
 ```
 
-NVD allows a handful of requests without a key. Set `STACKWATCH_NVD_API_KEY` for a faster first check.
+NVD allows a handful of requests without a key. For a faster first check, give the plugin a free
+[NVD API key](https://nvd.nist.gov/developers/request-an-api-key) when Claude Code asks on install,
+or later with `/plugin configure stackwatch`. Claude Code keeps it in secure storage and the plugin
+sends it only to NVD. The CLI outside Claude Code reads it from `CLAUDE_PLUGIN_OPTION_NVD_API_KEY`.
 
 ## Privacy
 
@@ -154,9 +157,10 @@ commit it.
 
 What leaves your machine:
 - package names and versions, sent to OSV;
-- runtime versions, sent to NVD.
+- runtime names and versions, sent to NVD (with your NVD API key, if you gave one);
+- runtime names, sent to endoflife.date.
 
-Feeds are only downloaded.
+Feeds are only downloaded. The server check runs over your own SSH connection to your own server.
 
 Feed text is treated as untrusted. It is flattened and bounded, and the skill tells Claude never to
 act on instructions inside it.
@@ -169,6 +173,12 @@ npm run verify     # typecheck, tests, bundle into plugin/dist (committed, so in
 ```
 
 `plugin/dist/THIRD_PARTY_NOTICES.txt` lists the bundled packages and their licenses.
+
+**Reviewing the bundle.** `plugin/dist` is built only from `src/` and `scripts/` by `npm run build`
+(esbuild, minified, split into files under 240 KiB). To check that the committed bundle matches the
+source, run `npm ci && npm run build && git diff --stat plugin/dist`: it should print nothing. The
+only network calls are in `src/http.ts` (fetching the sources listed in `plugin/sources.json`), and
+the only command run on a server is the read-only script in `src/probe.ts`.
 
 ## License
 

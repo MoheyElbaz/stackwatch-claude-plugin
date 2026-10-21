@@ -1,4 +1,4 @@
-stackwatch bundles the following packages into stackwatch.mjs.
+stackwatch bundles the following packages into stackwatch.mjs and chunks/.
 
 @modelcontextprotocol/sdk 1.32.1 (MIT)
 ------------------------------------------------------------

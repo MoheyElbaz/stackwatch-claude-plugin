@@ -30,7 +30,7 @@ interface NvdCve {
  */
 export async function loadNvd(source: Source, cpe: string, version: string, problems: string[], timeoutMs: number, quick: boolean): Promise<NvdCve[]> {
   const url = `${source.url}?virtualMatchString=${encodeURIComponent(`cpe:2.3:a:${cpe}:${version}`)}&noRejected&resultsPerPage=2000`;
-  const key = process.env.STACKWATCH_NVD_API_KEY;
+  const key = nvdApiKey();
   try {
     const res = await fetchCached(url, { ttlMs: (source.ttlMinutes ?? 720) * 60_000, timeoutMs: Math.max(timeoutMs, 30000), cacheOnly: quick, ...(key ? { headers: { apiKey: key } } : {}) });
     if (res.stale) problems.push(`${source.name} (${cpe}): unreachable, using the last copy`);
@@ -41,8 +41,17 @@ export async function loadNvd(source: Source, cpe: string, version: string, prob
   }
 }
 
+/**
+ * The NVD key the user chose to give the plugin: its `nvd_api_key` option, which Claude Code hands
+ * to hooks as CLAUDE_PLUGIN_OPTION_NVD_API_KEY and to the MCP server through .mcp.json. No other
+ * key on the machine is read. An option left empty arrives as "".
+ */
+function nvdApiKey(): string | undefined {
+  return process.env.CLAUDE_PLUGIN_OPTION_NVD_API_KEY?.trim() || undefined;
+}
+
 /** NVD answers 5 requests per 30 s without a key: space them out. */
-export const NVD_SPACING_MS = process.env.STACKWATCH_NVD_API_KEY ? 700 : 6500;
+export const NVD_SPACING_MS = nvdApiKey() ? 700 : 6500;
 
 export function nvdItems(source: Source, project: string, component: Component, cpe: string, cves: NvdCve[], kev: Kev, now: string): Item[] {
   return cves

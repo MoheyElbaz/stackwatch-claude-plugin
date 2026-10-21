@@ -1,6 +1,6 @@
 ---
 description: Register a project with stackwatch - scan its tech, read its server's versions, check it and show its risk
-argument-hint: [path] [ssh user@host] [alert level]
+argument-hint: "[path] [ssh user@host] [alert level]"
 ---
 
 Use the **security-check** skill to register a project with stackwatch.

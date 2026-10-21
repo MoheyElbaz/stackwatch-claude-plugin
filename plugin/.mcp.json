@@ -2,7 +2,10 @@
   "mcpServers": {
     "stackwatch": {
       "command": "node",
-      "args": ["${CLAUDE_PLUGIN_ROOT}/dist/stackwatch.mjs", "mcp"]
+      "args": ["${CLAUDE_PLUGIN_ROOT}/dist/stackwatch.mjs", "mcp"],
+      "env": {
+        "CLAUDE_PLUGIN_OPTION_NVD_API_KEY": "${user_config.nvd_api_key}"
+      }
     }
   }
 }

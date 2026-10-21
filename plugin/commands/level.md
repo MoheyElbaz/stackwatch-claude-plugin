@@ -1,6 +1,6 @@
 ---
 description: Choose from which risk level stackwatch raises alerts (critical, high, medium, low)
-argument-hint: <critical|high|medium|low> [project]
+argument-hint: "<critical|high|medium|low> [project]"
 ---
 
 Call the stackwatch `set_alert_level` tool with the level and optional project in $ARGUMENTS

@@ -2,13 +2,12 @@
 import { parseArgs } from 'node:util';
 import { sessionStartHook } from './hook.ts';
 import { notifications, notifyNew, setNotifyCommand } from './notify.ts';
-import { startMcpServer } from './mcp.ts';
 import {
   addComponent, alertsReport, describeProjects, initProject, markRead, markUnread, newsReport, refreshNow, removeComponent, setAlertLevel, sourcesReport, updateProjects,
 } from './ops.ts';
 import { LEVELS, type Level } from './types.ts';
 
-const VERSION = '0.1.0';
+const VERSION = '0.1.1';
 
 const HELP = `stackwatch ${VERSION}: security news and alerts for the tech your projects run on
 
@@ -119,9 +118,12 @@ async function main(argv: string[]): Promise<number> {
       // A refresh that ran past the hook's budget must not hold the session open.
       process.exit(0);
     }
-    case 'mcp':
+    case 'mcp': {
+      // Loaded only here, so the CLI and the session hook start without the MCP SDK.
+      const { startMcpServer } = await import('./mcp.ts');
       await startMcpServer(VERSION);
       return -1;
+    }
     default:
       throw new Error(`unknown command "${command}"\n\n${HELP}`);
   }

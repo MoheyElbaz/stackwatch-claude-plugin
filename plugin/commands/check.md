@@ -1,6 +1,6 @@
 ---
 description: Security alerts for your projects, most urgent first
-argument-hint: [project]
+argument-hint: "[project]"
 ---
 
 Use the **security-check** skill: call `security_alerts` (for the project in $ARGUMENTS, or all

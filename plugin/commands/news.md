@@ -1,6 +1,6 @@
 ---
 description: Unread security news from every source, with what each item affects
-argument-hint: [source | product | project]
+argument-hint: "[source | product | project]"
 ---
 
 Use the **security-check** skill: call `security_news`. If $ARGUMENTS names a source id, a product

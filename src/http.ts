@@ -4,7 +4,7 @@ import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { cacheDir } from './paths.ts';
 
-const USER_AGENT = 'stackwatch/0.1 (+https://github.com/MoheyElbaz/stackwatch-claude-plugin)';
+const USER_AGENT = 'stackwatch/0.1.1 (+https://github.com/MoheyElbaz/stackwatch-claude-plugin)';
 
 export interface Fetched {
   body: string;

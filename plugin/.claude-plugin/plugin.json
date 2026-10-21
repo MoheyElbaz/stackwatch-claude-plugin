@@ -1,6 +1,6 @@
 {
   "name": "stackwatch",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Security news and alerts for the tech your projects actually run on: Composer and npm packages, and the runtimes and OS packages on your servers. Reads official vendor feeds, mailing lists, CISA, NVD and OSV, matches them to your exact versions, and raises what needs fixing at the start of a Claude Code session.",
   "author": {
     "name": "Mohey Elbaz"
@@ -20,5 +20,14 @@
     "linux",
     "mcp"
   ],
-  "homepage": "https://github.com/MoheyElbaz/stackwatch-claude-plugin"
+  "homepage": "https://github.com/MoheyElbaz/stackwatch-claude-plugin",
+  "userConfig": {
+    "nvd_api_key": {
+      "type": "string",
+      "title": "NVD API key (optional)",
+      "description": "A free key from nvd.nist.gov/developers/request-an-api-key. It is sent only to NVD and makes the first check faster. Leave empty to use NVD without a key.",
+      "required": false,
+      "sensitive": true
+    }
+  }
 }

@@ -18,5 +18,5 @@ const sections = [...packages].sort().map((name) => {
   return `${name} ${pkg.version} (${pkg.license})\n${'-'.repeat(60)}\n${text}\n`;
 });
 
-writeFileSync('plugin/dist/THIRD_PARTY_NOTICES.txt', `stackwatch bundles the following packages into stackwatch.mjs.\n\n${sections.join('\n\n')}`);
+writeFileSync('plugin/dist/THIRD_PARTY_NOTICES.txt', `stackwatch bundles the following packages into stackwatch.mjs and chunks/.\n\n${sections.join('\n\n')}`);
 console.log(`notices for ${packages.size} packages`);

@@ -6,10 +6,13 @@ import type { Registry, Source } from './types.ts';
 
 const TYPES = new Set(['feed', 'osv', 'kev', 'endoflife', 'nvd']);
 
-/** sources.json ships beside the bundle (plugin/dist -> plugin/) and beside src (src -> plugin/). */
+/**
+ * sources.json ships in plugin/, found from the bundle (plugin/dist or plugin/dist/chunks, where
+ * this code may land when the bundle is split) and from src.
+ */
 function shippedFile(): string {
   if (process.env.STACKWATCH_SOURCES) return process.env.STACKWATCH_SOURCES;
-  for (const rel of ['../sources.json', '../plugin/sources.json']) {
+  for (const rel of ['../sources.json', '../plugin/sources.json', '../../sources.json']) {
     const path = fileURLToPath(new URL(rel, import.meta.url));
     if (existsSync(path)) return path;
   }

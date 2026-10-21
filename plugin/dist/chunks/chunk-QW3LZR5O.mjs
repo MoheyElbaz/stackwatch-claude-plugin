@@ -1,0 +1,4 @@
+#!/usr/bin/env node
+// stackwatch, GPL-3.0-or-later, https://github.com/MoheyElbaz/stackwatch-claude-plugin (bundled packages and their licenses: THIRD_PARTY_NOTICES.txt)
+import { createRequire as __cr } from 'node:module'; const require = __cr(import.meta.url);
+var h=Object.create;var f=Object.defineProperty;var i=Object.getOwnPropertyDescriptor;var j=Object.getOwnPropertyNames;var k=Object.getPrototypeOf,l=Object.prototype.hasOwnProperty;var m=(b,a)=>()=>{try{return a||b((a={exports:{}}).exports,a),a.exports}catch(c){throw a=0,c}},n=(b,a)=>{for(var c in a)f(b,c,{get:a[c],enumerable:!0})},e=(b,a,c,g)=>{if(a&&typeof a=="object"||typeof a=="function")for(let d of j(a))!l.call(b,d)&&d!==c&&f(b,d,{get:()=>a[d],enumerable:!(g=i(a,d))||g.enumerable});return b},o=(b,a,c)=>(e(b,a,"default"),c&&e(c,a,"default")),p=(b,a,c)=>(c=b!=null?h(k(b)):{},e(a||!b||!b.__esModule?f(c,"default",{value:b,enumerable:!0}):c,b));export{m as a,n as b,o as c,p as d};
