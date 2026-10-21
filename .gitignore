@@ -1,0 +1,7 @@
+node_modules/
+.DS_Store
+*.log
+# Stack lists and findings live in ~/.stackwatch, never in this repo: they name the exact
+# versions a server runs, which is what an attacker looks for.
+.stackwatch/
+stacks/

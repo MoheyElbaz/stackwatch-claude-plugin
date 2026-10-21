@@ -1,0 +1,448 @@
+{
+  "$comment": "Every source stackwatch reads. Add a feed by adding an entry; no code. type: feed (any RSS or Atom), osv, kev, endoflife, nvd. official: published by the maintainers of the listed products, so its security posts are trusted as confirmed. products: what the source is about; its items concern those products even when they don't name them. Override or disable entries (\"enabled\": false) in ~/.stackwatch/sources.json. products.cpe: NVD vendor:product, to look up CVEs of runtimes not installed by the OS.",
+  "sources": [
+    {
+      "id": "php-news",
+      "name": "php.net",
+      "type": "feed",
+      "url": "https://www.php.net/feed.atom",
+      "official": true,
+      "products": [
+        "php"
+      ]
+    },
+    {
+      "id": "nodejs-vulnerabilities",
+      "name": "Node.js security",
+      "type": "feed",
+      "url": "https://nodejs.org/en/feed/vulnerability.xml",
+      "official": true,
+      "products": [
+        "nodejs"
+      ]
+    },
+    {
+      "id": "laravel-releases",
+      "name": "Laravel releases",
+      "type": "feed",
+      "url": "https://github.com/laravel/framework/releases.atom",
+      "official": true,
+      "products": [
+        "laravel"
+      ]
+    },
+    {
+      "id": "laravel-blog",
+      "name": "Laravel blog",
+      "type": "feed",
+      "url": "https://blog.laravel.com/feed",
+      "official": true,
+      "products": [
+        "laravel"
+      ],
+      "ttlMinutes": 360
+    },
+    {
+      "id": "mariadb-news",
+      "name": "MariaDB news",
+      "type": "feed",
+      "url": "https://mariadb.org/feed/",
+      "official": true,
+      "products": [
+        "mariadb"
+      ],
+      "ttlMinutes": 360
+    },
+    {
+      "id": "almalinux-blog",
+      "name": "AlmaLinux blog",
+      "type": "feed",
+      "url": "https://almalinux.org/blog/index.xml",
+      "official": true,
+      "products": [
+        "almalinux"
+      ],
+      "ttlMinutes": 360
+    },
+    {
+      "id": "ubuntu-usn",
+      "name": "Ubuntu security notices",
+      "type": "feed",
+      "url": "https://ubuntu.com/security/notices/rss.xml",
+      "official": true,
+      "products": [
+        "ubuntu"
+      ]
+    },
+    {
+      "id": "debian-dsa",
+      "name": "Debian security advisories",
+      "type": "feed",
+      "url": "https://www.debian.org/security/dsa-long",
+      "official": true,
+      "products": [
+        "debian"
+      ]
+    },
+    {
+      "id": "nginx-news",
+      "name": "nginx news",
+      "type": "feed",
+      "url": "https://nginx.org/index.rss",
+      "official": true,
+      "products": [
+        "nginx"
+      ],
+      "ttlMinutes": 360
+    },
+    {
+      "id": "postgresql-news",
+      "name": "PostgreSQL news",
+      "type": "feed",
+      "url": "https://www.postgresql.org/news.rss",
+      "official": true,
+      "products": [
+        "postgresql"
+      ],
+      "ttlMinutes": 360
+    },
+    {
+      "id": "redis-releases",
+      "name": "Redis releases",
+      "type": "feed",
+      "url": "https://github.com/redis/redis/releases.atom",
+      "official": true,
+      "products": [
+        "redis"
+      ],
+      "ttlMinutes": 360
+    },
+    {
+      "id": "symfony-blog",
+      "name": "Symfony blog",
+      "type": "feed",
+      "url": "https://feeds.feedburner.com/symfony/blog",
+      "official": true,
+      "products": [
+        "symfony"
+      ],
+      "ttlMinutes": 360
+    },
+    {
+      "id": "wordpress-releases",
+      "name": "WordPress releases",
+      "type": "feed",
+      "url": "https://wordpress.org/news/category/releases/feed/",
+      "official": true,
+      "products": [
+        "wordpress"
+      ],
+      "ttlMinutes": 360
+    },
+    {
+      "id": "drupal-security",
+      "name": "Drupal security advisories",
+      "type": "feed",
+      "url": "https://www.drupal.org/security/rss.xml",
+      "official": true,
+      "products": [
+        "drupal"
+      ]
+    },
+    {
+      "id": "django-blog",
+      "name": "Django blog",
+      "type": "feed",
+      "url": "https://www.djangoproject.com/rss/weblog/",
+      "official": true,
+      "products": [
+        "django"
+      ],
+      "ttlMinutes": 360
+    },
+    {
+      "id": "python-insider",
+      "name": "Python Insider",
+      "type": "feed",
+      "url": "https://pythoninsider.blogspot.com/feeds/posts/default",
+      "official": true,
+      "products": [
+        "python"
+      ],
+      "ttlMinutes": 360
+    },
+    {
+      "id": "go-blog",
+      "name": "Go blog",
+      "type": "feed",
+      "url": "https://go.dev/blog/feed.atom",
+      "official": true,
+      "products": [
+        "go"
+      ],
+      "ttlMinutes": 360
+    },
+    {
+      "id": "rails-blog",
+      "name": "Ruby on Rails blog",
+      "type": "feed",
+      "url": "https://rubyonrails.org/feed.xml",
+      "official": true,
+      "products": [
+        "rails"
+      ],
+      "ttlMinutes": 360
+    },
+    {
+      "id": "gitlab-security",
+      "name": "GitLab security releases",
+      "type": "feed",
+      "url": "https://about.gitlab.com/security-releases.xml",
+      "official": true,
+      "products": [
+        "gitlab"
+      ],
+      "ttlMinutes": 360
+    },
+    {
+      "id": "oss-security",
+      "name": "oss-security",
+      "type": "feed",
+      "url": "https://seclists.org/rss/oss-sec.rss"
+    },
+    {
+      "id": "full-disclosure",
+      "name": "Full Disclosure",
+      "type": "feed",
+      "url": "https://seclists.org/rss/fulldisclosure.rss"
+    },
+    {
+      "id": "cisa-advisories",
+      "name": "CISA advisories",
+      "type": "feed",
+      "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml"
+    },
+    {
+      "id": "sans-isc",
+      "name": "SANS ISC",
+      "type": "feed",
+      "url": "https://isc.sans.edu/rssfeed.xml"
+    },
+    {
+      "id": "exploit-db",
+      "name": "Exploit-DB",
+      "type": "feed",
+      "url": "https://www.exploit-db.com/rss.xml"
+    },
+    {
+      "id": "bleepingcomputer",
+      "name": "BleepingComputer",
+      "type": "feed",
+      "url": "https://www.bleepingcomputer.com/feed/"
+    },
+    {
+      "id": "thehackernews",
+      "name": "The Hacker News",
+      "type": "feed",
+      "url": "https://feeds.feedburner.com/TheHackersNews"
+    },
+    {
+      "id": "cisa-kev",
+      "name": "CISA exploited list",
+      "type": "kev",
+      "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+      "ttlMinutes": 360
+    },
+    {
+      "id": "osv",
+      "name": "OSV",
+      "type": "osv",
+      "url": "https://api.osv.dev/v1"
+    },
+    {
+      "id": "endoflife",
+      "name": "endoflife.date",
+      "type": "endoflife",
+      "url": "https://endoflife.date/api/v1/products/",
+      "ttlMinutes": 360
+    },
+    {
+      "id": "nvd",
+      "name": "NVD",
+      "type": "nvd",
+      "url": "https://services.nvd.nist.gov/rest/json/cves/2.0",
+      "ttlMinutes": 720
+    }
+  ],
+  "products": {
+    "php": {
+      "names": [
+        "PHP"
+      ],
+      "cpe": [
+        "php:php"
+      ]
+    },
+    "nodejs": {
+      "names": [
+        "Node.js",
+        "NodeJS"
+      ],
+      "cpe": [
+        "nodejs:node.js"
+      ]
+    },
+    "laravel": {
+      "names": [
+        "Laravel"
+      ],
+      "packages": [
+        "laravel/framework"
+      ]
+    },
+    "symfony": {
+      "names": [
+        "Symfony"
+      ],
+      "packages": [
+        "symfony/http-kernel",
+        "symfony/symfony"
+      ]
+    },
+    "apache-http-server": {
+      "names": [
+        "Apache HTTP Server",
+        "Apache httpd",
+        "httpd"
+      ],
+      "cpe": [
+        "apache:http_server"
+      ]
+    },
+    "nginx": {
+      "names": [
+        "nginx"
+      ],
+      "cpe": [
+        "f5:nginx"
+      ]
+    },
+    "mariadb": {
+      "names": [
+        "MariaDB"
+      ],
+      "cpe": [
+        "mariadb:mariadb"
+      ]
+    },
+    "mysql": {
+      "names": [
+        "MySQL"
+      ],
+      "cpe": [
+        "oracle:mysql"
+      ]
+    },
+    "postgresql": {
+      "names": [
+        "PostgreSQL"
+      ],
+      "cpe": [
+        "postgresql:postgresql"
+      ]
+    },
+    "redis": {
+      "names": [
+        "Redis"
+      ],
+      "cpe": [
+        "redis:redis"
+      ]
+    },
+    "openssl": {
+      "names": [
+        "OpenSSL"
+      ],
+      "cpe": [
+        "openssl:openssl"
+      ]
+    },
+    "openssh": {
+      "names": [
+        "OpenSSH"
+      ],
+      "cpe": [
+        "openbsd:openssh"
+      ],
+      "endoflife": false
+    },
+    "almalinux": {
+      "names": [
+        "AlmaLinux"
+      ]
+    },
+    "rocky-linux": {
+      "names": [
+        "Rocky Linux"
+      ]
+    },
+    "ubuntu": {
+      "names": [
+        "Ubuntu"
+      ]
+    },
+    "debian": {
+      "names": [
+        "Debian"
+      ]
+    },
+    "wordpress": {
+      "names": [
+        "WordPress"
+      ]
+    },
+    "phpmyadmin": {
+      "names": [
+        "phpMyAdmin"
+      ],
+      "endoflife": false
+    },
+    "drupal": {
+      "names": [
+        "Drupal"
+      ],
+      "packages": [
+        "drupal/core"
+      ]
+    },
+    "django": {
+      "names": [
+        "Django"
+      ]
+    },
+    "python": {
+      "names": [
+        "Python",
+        "CPython"
+      ]
+    },
+    "go": {
+      "names": [
+        "Golang"
+      ],
+      "endoflife": "go"
+    },
+    "rails": {
+      "names": [
+        "Ruby on Rails",
+        "Rails"
+      ],
+      "endoflife": "rails"
+    },
+    "gitlab": {
+      "names": [
+        "GitLab"
+      ]
+    }
+  }
+}

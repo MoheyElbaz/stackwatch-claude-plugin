@@ -1,0 +1,16 @@
+{
+  "name": "stackwatch",
+  "description": "stackwatch: security news and alerts for the tech your projects actually run on.",
+  "owner": {
+    "name": "Mohey Elbaz"
+  },
+  "plugins": [
+    {
+      "name": "stackwatch",
+      "source": "./plugin",
+      "description": "Security news and alerts for the tech your projects actually run on, raised in Claude Code when something needs fixing.",
+      "homepage": "https://github.com/MoheyElbaz/stackwatch-claude-plugin",
+      "license": "GPL-3.0-or-later"
+    }
+  ]
+}

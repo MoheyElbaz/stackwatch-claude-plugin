@@ -1,0 +1,17 @@
+{
+  "description": "Raises new critical and high security findings at the start of a session (checks at most hourly; silent when there is nothing).",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/dist/stackwatch.mjs\" hook",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}

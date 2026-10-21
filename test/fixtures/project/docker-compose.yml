@@ -1,0 +1,9 @@
+services:
+  db:
+    image: "mysql:8.0.39"
+  cache:
+    image: redis:7.2
+  web:
+    image: nginx
+  app:
+    image: ghcr.io/acme/app:1.2.3

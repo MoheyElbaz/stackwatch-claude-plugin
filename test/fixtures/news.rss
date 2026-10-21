@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Example security news</title>
+    <item>
+      <title>Critical PHP flaw CVE-2026-109618 lets attackers run code; patch to 8.2.35</title>
+      <link>https://news.example/php-rce</link>
+      <guid isPermaLink="false">news-1</guid>
+      <pubDate>Wed, 21 Oct 2026 08:00:00 +0000</pubDate>
+      <description><![CDATA[<p>Researchers say PHP before 8.2.35 &amp; 8.3.36 is <b>affected</b>.</p>]]></description>
+    </item>
+    <item>
+      <title>New npm worm hits the debug package</title>
+      <link>https://news.example/npm-worm</link>
+      <guid>news-2</guid>
+      <pubDate>Tue, 20 Oct 2026 10:00:00 +0000</pubDate>
+      <description>&lt;p&gt;Attackers published malicious versions of axios to npm.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ransomware gang hits hospitals</title>
+      <link>https://news.example/ransomware</link>
+      <guid>news-3</guid>
+      <dc:date>2026-10-19T10:00:00Z</dc:date>
+      <description>Nothing about your stack; we debug the attack chain.</description>
+    </item>
+  </channel>
+</rss>

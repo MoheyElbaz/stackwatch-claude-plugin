@@ -1,0 +1,1 @@
+{ "name": "acme/app", "require": { "php": "^8.3", "symfony/http-kernel": "^7.1" } }

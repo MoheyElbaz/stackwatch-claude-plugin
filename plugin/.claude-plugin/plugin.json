@@ -1,0 +1,24 @@
+{
+  "name": "stackwatch",
+  "version": "0.1.0",
+  "description": "Security news and alerts for the tech your projects actually run on: Composer and npm packages, and the runtimes and OS packages on your servers. Reads official vendor feeds, mailing lists, CISA, NVD and OSV, matches them to your exact versions, and raises what needs fixing at the start of a Claude Code session.",
+  "author": {
+    "name": "Mohey Elbaz"
+  },
+  "repository": "https://github.com/MoheyElbaz/stackwatch-claude-plugin",
+  "license": "GPL-3.0-or-later",
+  "keywords": [
+    "security",
+    "cve",
+    "vulnerabilities",
+    "osv",
+    "nvd",
+    "cisa-kev",
+    "rss",
+    "composer",
+    "npm",
+    "linux",
+    "mcp"
+  ],
+  "homepage": "https://github.com/MoheyElbaz/stackwatch-claude-plugin"
+}

@@ -1,0 +1,48 @@
+{
+  "name": "stackwatch",
+  "version": "0.1.0",
+  "description": "Security alerts for the tech your projects actually run on, as a Claude Code plugin (MCP server, skill, commands and a session-start check).",
+  "license": "GPL-3.0-or-later",
+  "author": "Mohey Elbaz",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "stackwatch": "plugin/dist/stackwatch.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "esbuild src/cli.ts --bundle --platform=node --format=esm --target=node20 --outfile=plugin/dist/stackwatch.mjs --minify --legal-comments=none --metafile=plugin/dist/meta.json \"--banner:js=#!/usr/bin/env node\n// stackwatch, GPL-3.0-or-later, https://github.com/MoheyElbaz/stackwatch-claude-plugin (bundled packages and their licenses: THIRD_PARTY_NOTICES.txt)\nimport { createRequire as __cr } from 'node:module'; const require = __cr(import.meta.url);\" && node scripts/notices.mjs && rm plugin/dist/meta.json",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test --test-reporter=spec test/*.test.ts",
+    "verify": "npm run typecheck && npm test && npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "fast-xml-parser": "5.11.2",
+    "yaml": "2.9.1",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.2",
+    "esbuild": "0.28.2",
+    "typescript": "5.9.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MoheyElbaz/stackwatch-claude-plugin.git"
+  },
+  "homepage": "https://github.com/MoheyElbaz/stackwatch-claude-plugin",
+  "keywords": [
+    "claude-code",
+    "claude-code-plugin",
+    "mcp",
+    "security",
+    "cve",
+    "vulnerability",
+    "osv",
+    "nvd",
+    "rss"
+  ]
+}

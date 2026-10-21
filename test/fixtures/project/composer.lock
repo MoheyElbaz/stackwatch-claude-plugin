@@ -1,0 +1,2 @@
+{ "packages": [ { "name": "symfony/http-kernel", "version": "v7.1.5" }, { "name": "acme/forked", "version": "dev-main" } ],
+  "packages-dev": [ { "name": "phpunit/phpunit", "version": "11.5.0" }, { "name": "symfony/http-kernel", "version": "v7.1.5" } ] }

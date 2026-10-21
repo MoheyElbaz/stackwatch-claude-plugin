@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:php="http://php.net/ns/news">
+  <title>PHP.net news &amp; announcements</title>
+  <updated>2026-10-21T00:35:26+00:00</updated>
+  <entry xmlns="http://www.w3.org/2005/Atom" xml:base="entries/2026-10-21-5.xml">
+    <title>Security advisory: Critical remote code execution vulnerabilities, update now</title>
+    <id>https://www.php.net/archive/2026.php#2026-10-21-5</id>
+    <updated>2026-10-21T00:35:26+00:00</updated>
+    <link href="https://www.php.net/index.php#2026-10-21-5" rel="alternate" type="text/html"/>
+    <link href="https://www.php.net/archive/2026.php#2026-10-21-5" rel="via" type="text/html"/>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p>Two issues, <strong>CVE-2026-109618</strong> and CVE-2026-109619, are fixed in 8.2.35, 8.3.36, 8.4.27 and 8.5.12.</p></div></content>
+  </entry>
+  <entry xmlns="http://www.w3.org/2005/Atom" xml:base="entries/2026-10-21-3.xml">
+    <title>PHP 8.3.36 Released!</title>
+    <id>https://www.php.net/archive/2026.php#2026-10-21-3</id>
+    <updated>2026-10-21T00:30:00+00:00</updated>
+    <link href="https://www.php.net/index.php#2026-10-21-3" rel="alternate" type="text/html"/>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p>PHP 8.3.36 fixes CVE-2026-109618 and CVE-2026-109619.</p></div></content>
+  </entry>
+  <entry xmlns="http://www.w3.org/2005/Atom" xml:base="entries/2026-10-20-1.xml">
+    <title>Upcoming Critical PHP Security Release</title>
+    <id>https://www.php.net/archive/2026.php#2026-10-20-1</id>
+    <updated>2026-10-20T09:00:00+00:00</updated>
+    <link href="https://www.php.net/index.php#2026-10-20-1" rel="alternate" type="text/html"/>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p>A security release for all supported branches is planned for tomorrow.</p></div></content>
+  </entry>
+  <entry xmlns="http://www.w3.org/2005/Atom" xml:base="entries/2026-01-10-1.xml">
+    <title>PHP 8.3.10 Released!</title>
+    <id>https://www.php.net/archive/2026.php#2026-01-10-1</id>
+    <updated>2026-01-10T09:00:00+00:00</updated>
+    <link href="https://www.php.net/index.php#2026-01-10-1" rel="alternate" type="text/html"/>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p>Old news: 8.3.10 fixes CVE-2025-00001.</p></div></content>
+  </entry>
+</feed>
